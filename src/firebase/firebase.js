@@ -5,13 +5,13 @@ import { getStorage } from "firebase/storage";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBga3ukUlAXuqcKZ2IRmSkhgDL1EzN3B2s",
-  authDomain: "instaclone257.firebaseapp.com",
-  projectId: "instaclone257",
-  storageBucket: "instaclone257.appspot.com",
-  messagingSenderId: "99554219929",
-  appId: "1:99554219929:web:77383969d9551ab0e6e508",
-  measurementId: "G-36PW3FNGQY"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain:import.meta.env.VITE_FIREBASE_AUTH_DOMAIN ,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId:import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
@@ -19,4 +19,6 @@ const auth =getAuth(app);
 const firestore = getFirestore(app);
 const storage = getStorage(app);
 
-export {app,auth,firestore,storage}
+export {app,auth,firestore,storage};
+
+
